@@ -34,55 +34,7 @@ class TestLogin(unittest.TestCase):
         """
         3.上传商品
         """
-        # print("item", items)
-        # projectInfo = """{
-        #     "t": 1649503962366,
-        #     "prodName": "好东西",
-        #     "brief": "",
-        #     "video": "",
-        #     "prodNameEn": "好东西",
-        #     "prodNameCn": "好东西",
-        #     "contentEn": "",
-        #     "contentCn": "",
-        #     "briefEn": "",
-        #     "briefCn": "",
-        #     "pic": "2022/04/f414d8d9df274b909b959b579d67f88a.jpg",
-        #     "imgs": "2022/04/f414d8d9df274b909b959b579d67f88a.jpg",
-        #     "preSellStatus": 0,
-        #     "preSellTime": null,
-        #     "categoryId": 380,
-        #     "skuList": [
-        #         {
-        #             "price": 0.01,
-        #             "oriPrice": 0.01,
-        #             "stocks": 0,
-        #             "skuScore": 1,
-        #             "properties": "",
-        #             "skuName": "",
-        #             "prodName": "",
-        #             "weight": 0,
-        #             "volume": 0,
-        #             "status": 1,
-        #             "prodNameCn": "好东西",
-        #             "prodNameEn": "好东西"
-        #         }
-        #     ],
-        #     "tagList": [
-        #         2
-        #     ],
-        #     "content": "",
-        #     "deliveryTemplateId": 1,
-        #     "totalStocks": 0,
-        #     "price": 0.01,
-        #     "oriPrice": 0.01,
-        #     "deliveryModeVo": {
-        #         "hasShopDelivery": true,
-        #         "hasUserPickUp": false,
-        #         "hasCityDelivery": false
-        #     }
-        # }"""
-        # 修改上传图片，添加token，发送接口
-        url = 'http://mall.lemonban.com:8108/prod/prod'
+        url = items['url']
         projectInfo = items['json']
         # print(self.token)
         headers = {"Authorization": f"Bearer{self.token}"}
