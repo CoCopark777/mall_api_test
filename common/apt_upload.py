@@ -55,7 +55,7 @@ def upload_image(file_path, token):
     headers = {"Authorization": f"Bearer{token}"}
     resp = requests.request('POST', url, files={'file': f}, headers=headers)
     f.close()
-    print(resp.text)
+    # print(resp.text)
     return resp.text
 
 

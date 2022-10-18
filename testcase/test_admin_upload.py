@@ -84,20 +84,20 @@ class TestLogin(unittest.TestCase):
         # 修改上传图片，添加token，发送接口
         url = 'http://mall.lemonban.com:8108/prod/prod'
         projectInfo = items['json']
-        print(self.token)
+        # print(self.token)
         headers = {"Authorization": f"Bearer{self.token}"}
         data = json.loads(projectInfo)
         data['pic'] = self.image
         data['imgs'] = self.image
 
         response = requests.request("post", url, json=data, headers=headers)
-        print(response.text)
+        # print(response.text)
 
         # username = item["username"]
         # password = item["password"]
         # expected = item['expected']
         # print(username, password, expected)
 
-        # self.assertEqual(expected, str(actual))
+        self.assertEqual(response.status_code == 200, True)
 
 # if __name__ == '__main__':
