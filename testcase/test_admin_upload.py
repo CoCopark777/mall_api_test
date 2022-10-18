@@ -26,7 +26,8 @@ class TestLogin(unittest.TestCase):
         # 登录
         self.token = admin_login(username="student", password="123456a")
         # 上传一张图片
-        file = r'D:\2022object\mall_api_test\testdata\1.jpeg'
+        # file = r'D:\2022object\mall_api_test\testdata\1.jpeg'
+        file = Config.CONFIG_DIR / 'testdata' / '1.jpeg'
         self.image = upload_image(file, self.token)
 
     @list_data(items)
